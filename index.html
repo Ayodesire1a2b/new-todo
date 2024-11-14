@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todonew.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/54e86b48e4.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="todo class.css">
+</head>
+
+<body>
+  <div class="one">
+    <div class="two">
+      <div class="list">
+        <h1>TODO-LIST</h1>
+      </div>
+      <div class="both">
+        <input class="input" type="text" placeholder="input your todo" id="todoItem" autofocus />
+        <button class="button" onclick="submitTodo()">Submit Todo</button>
+      </div>
+      <div class="ptag">
+        <p id="todolist"></p>
+      </div>
+
+
+        <div class="new">
+          <button class="deletelast" onclick="deleteLastFunction()">Delete Last</button>
+          <button class="deletefirst" onclick="deleteFirstFunction()">Delete First</button>
+          <button class="reverse" onclick="reverseTodo()">Reverse Items</button>
+          <button class="clear" onclick="clearTodo()">Clear Todo</button>
+        </div>
+      </div>
+  </div>
+  <!-- <button onclick="returnFirstFunction()">return first</button> -->
+  <!-- to create a parameterized function 1.create a fuction with parameter 2.pass in .the parameter -->
+
+  <!-- <button onclick="greet('Abiodun')">greet user</button> -->
+
+  <script>
+    let todoArray = [];
+    function submitTodo() {
+      // alert('i dey work ooo')
+      console.log(todoItem.value);
+      if (todoItem.value == "") {
+        alert("kindly input something");
+      } else {
+        todoArray.push(todoItem.value);
+      }
+      console.log(todoArray);
+      displayTodo();
+      todoItem.value = "";
+    }
+
+    // todoList.innerHTML += `${todoItem.value}<br/>`
+    // console.log(todoList)
+
+    //starting value,condition and increament
+
+    function displayTodo() {
+      todolist.innerHTML = "";
+      for (let i = 0; i < todoArray.length; i++) {
+        todolist.innerHTML += `${i + 1}.${todoArray[i]
+          } <i class="fa-solid fa-trash-can fa-bounce" onclick="deleteItem(${i})"></i> <i class="fa-regular fa-pen-to-square" onclick="editItem(${i})"></i><br/>`;
+      }
+    }
+
+    function deleteLastFunction() {
+      if (todoArray.length == 0) {
+        alert("Oga there is nothing to delete");
+      } else {
+        todoArray.pop();
+        console.log(todoArray);
+        displayTodo();
+      }
+    }
+
+    function deleteFirstFunction() {
+      if (todoArray.length == 0) {
+        alert("Oga there is nothing to delete");
+      } else {
+        todoArray.shift();
+        console.log(todoArray);
+        displayTodo();
+      }
+    }
+    function reverseTodo() {
+      todoArray.reverse();
+      console.log(todoArray);
+      displayTodo();
+    }
+
+    function clearTodo() {
+      todoArray = [];
+      console.log(todoArray);
+      displayTodo();
+    }
+
+    function deleteItem(i) {
+      if (confirm("are you sure you want to delete?") == true) {
+        todoArray.splice(i, 1);
+        console.log(todoArray);
+        displayTodo();
+      } else {
+        displayTodo()
+      }
+    }
+
+    function editItem(i) {
+      let newTodo = prompt('input the new todo you want to edit', todoArray[i])
+      todoArray.splice(i, 1, newTodo)
+      displayTodo()
+    }
+
+    // function greet(name) {
+    //   alert(`hello ${name}`)
+    // }
+
+    // todoArray.length==0?alert("Oga there is nothing to delete"):todoArray.shift();console.log(todoArray);displayTodo();
+  </script>
+</body>
+
+</html>
+</body>
+</html>

@@ -1,0 +1,129 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.one{
+    display: flex;
+    /* justify-content: center; */
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color:antiquewhite;
+    /* background-image: url(/multimedia/big\ background.jpeg); */
+    /* background-position: 100%; */
+
+    
+
+    
+}
+/* .ptag{
+    height: 70vh;
+} */
+
+.two{
+    display: flex;
+    width: 40vw;
+    border: 1px solid black;
+    flex-direction: column;
+    
+    border-radius: 10px;
+    background-image: url(/media/phone\ background.jpeg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+   
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size:xx-large;
+    color:white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.both{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.input{
+    width: 65%;
+    height: 40px;
+    font-size: 20px;
+    color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.button{
+    width: 30%;
+    border-radius: 30px;
+    background-color: brown;
+    font-size: 20px;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.new{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 610px;
+    
+
+}
+
+.ptag{
+    padding: 10px;
+    height: 10vh;
+    color: yellow;
+    font-size: 25px;
+}
+
+.deletelast{
+    width: 20%;
+    border-radius: 30px;
+    background-color: gray;
+    font-size: 20px;
+    color: white;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.deletefirst{
+    width: 20%;
+    border-radius: 30px;
+    background-color: purple;
+    font-size: 20px;
+    color: white;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.reverse{
+    width: 20%;
+    border-radius: 30px;
+    background-color: blue;
+    font-size: 18px;
+    color: white;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.clear{
+    width: 20%;
+    border-radius: 30px;
+    background-color: red;
+    height: 60px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
