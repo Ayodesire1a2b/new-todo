@@ -30,7 +30,7 @@
     flex-direction: column;
     
     border-radius: 10px;
-    background-image: url(/media/phone\ background.jpeg);
+    background-image: url('./media/background.jpeg');
     background-position: 50%;
     background-repeat: no-repeat;
     margin-top: 40px;
